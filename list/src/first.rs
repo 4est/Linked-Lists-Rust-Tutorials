@@ -13,3 +13,14 @@ struct Node {
     elem: i32,
     next: Link,
 }
+
+//To associate actual code with a type use impl block.
+//Need a way to construct a list.
+//Self is an alias for the type next to impl below
+//We refer to variants of an enum using ::, which is the namespacing operator.
+//the last expression of a function is implicitly returned. You can still use 'return' though.
+impl List {
+    pub fn new() -> Self {
+        List { head: Link::Empty }
+    }
+}
